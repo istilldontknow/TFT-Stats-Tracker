@@ -1,0 +1,39 @@
+<style>
+   .center {
+	  margin: auto;
+	  width: 60%;
+	  padding: 10px;
+	}
+	
+	.center1 {
+	  margin: auto;
+  	  width: 40%;
+	  border: 1px solid red;
+  	  padding: 10px;	
+	}
+</style>
+
+
+<link rel='stylesheet' href = '/app.css'>
+<h1>CwertiLe's Ranked TFT Stats</h1>
+<p>
+	Patch 1016 Top 5 Compositions
+</p>
+ 
+
+<!-- build a table and put the values of composition and avg_result from the results object into table rows -->
+<!-- center a div and center the table within the div. could just as easily use a flex container here -->
+<div class="center container">
+	<table class="center1">
+	   <tr>
+		  <th>Composition</th><th>Average Placement</th>
+	   </tr>
+
+	   <% for (var i = 0; i < results.length; i++) { %>
+		<tr>
+		  <td><%= results[i].composition %></td>
+		  <td><%= results[i].avg_result %></td>
+		</tr>    
+	   <% } %>
+	</table>	
+</div>
